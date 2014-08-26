@@ -1,7 +1,7 @@
 inherit rubygem
 
 NAME="ruby-rack"
-VERSION=1.4.5
+VERSION=1.5.2
 RELEASE=1
 CATEGORY="Ruby"
 SUMMARY="Ruby rack extension"
@@ -10,3 +10,9 @@ developing web applications in Ruby. By wrapping HTTP requests and responses in
 the simplest way possible, it unifies and distills the API for web servers, web
 frameworks, and software in between (the so-called middleware) into a single
 method call."
+
+ARCH=noarch
+
+PKG_NAMES="${NAME} ${NAME}-doc"
+ruby_rack_CONTENTS="--exclude=example usr/bin/rackup ${RUBYGEM_INSTDIR#/} ${RUBYGEM_SPEC#/}"
+ruby_rack_doc_CONTENTS="${RUBYGEM_DOCDIR#/} ${RUBYGEM_INSTDIR#/}/example/"
