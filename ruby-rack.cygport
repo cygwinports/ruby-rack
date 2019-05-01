@@ -1,7 +1,7 @@
 inherit rubygem
 
 NAME="ruby-rack"
-VERSION=2.0.3
+VERSION=2.0.6
 RELEASE=1
 CATEGORY="Ruby"
 SUMMARY="Ruby rack extension"
